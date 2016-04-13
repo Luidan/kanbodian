@@ -43,7 +43,10 @@ class Card extends Component {
         return (
             <div className="card">
                 <div style={sideColor}/>
-                <div className={ this.state.showDetails ? 'card-title card-title-is-open' : 'card-title' } onClick={this.toggleDetails.bind(this)}>{this.props.card.title}</div>
+                <div className="card-title" onClick={this.toggleDetails.bind(this)}>
+                    <i className={this.state.showDetails ? 'fa fa-chevron-down' : 'fa fa-chevron-right'}></i>
+                    <span>{this.props.card.title}</span>
+                </div>
                 {cardDetails}
             </div>
         );
