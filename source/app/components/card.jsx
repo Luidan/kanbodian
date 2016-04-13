@@ -41,7 +41,7 @@ class Card extends Component {
         let sideColor = this.resolveSideColor();
         
         return (
-            <div className="card">
+            <div className="card no-select">
                 <div style={sideColor}/>
                 <div className="card-title" onClick={this.toggleDetails.bind(this)}>
                     <i className={this.state.showDetails ? 'fa fa-chevron-down' : 'fa fa-chevron-right'}></i>
