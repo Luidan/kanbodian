@@ -24,6 +24,16 @@ h1 {
   user-select: none;           /* non-prefixed version, currently
                                   not supported by any browser */
 }
+.column {
+    position: relative;  
+    display: inline-block;  
+    vertical-align: top;  
+    white-space: normal;  
+    height: 100%;  
+    width: 33%;  
+    padding: 0 20px;  
+    overflow: auto;
+}
 .card {
     position: relative;
     z-index: 1;

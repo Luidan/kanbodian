@@ -16,7 +16,7 @@ class Card extends Component {
         
         let cardDetails = (
                 <div className="card-details">
-                    <span dangerouslySetInnerHTML={{__html:marked(this.props.card.description)}}/>
+                    <span dangerouslySetInnerHTML={{__html:marked(this.props.description)}}/>
                 </div>
             );
         return cardDetails;    
@@ -30,7 +30,7 @@ class Card extends Component {
             bottom: 0,
             left: 0,
             width: 7,
-            backgroundColor: this.props.card.cardType.backgroundColor
+            backgroundColor: this.props.cardType.backgroundColor
         };
         
         return sideColor;
@@ -45,7 +45,7 @@ class Card extends Component {
                 <div style={sideColor}/>
                 <div className="card-title" onClick={this.toggleDetails.bind(this)}>
                     <i className={this.state.showDetails ? 'fa fa-chevron-down' : 'fa fa-chevron-right'}></i>
-                    <span>{this.props.card.title}</span>
+                    <span>{this.props.title}</span>
                 </div>
                 {cardDetails}
             </div>
